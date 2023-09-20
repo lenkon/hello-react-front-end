@@ -9,12 +9,12 @@ const Greeting = () => {
     dispatch(fetchGreetingsThunk());
   }, []);
 
-  const greetings = useSelector((state) => state.greetings.greetings);
-  const { greet } = greetings;
+  const greet = useSelector((state) => state.greetings.greetings);
+  const { greeting } = greet;
 
   return (
     <div>
-      <h1>{greet}</h1>
+      <h1>{greeting}</h1>
     </div>
   );
 };
